@@ -9,6 +9,10 @@ nano ~/.ssh/config
 Host *
   ServerAliveInterval 30
   ServerAliveCountMax 5
+  
+#some apps & extansions for mac
+brew install caskroom/cask/brew-cask
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
 #block websites
 sudo sh -c "echo '127.0.0.1 wykop.pl' >> /etc/hosts"
