@@ -12,7 +12,7 @@ Host *
   
 #some apps & extansions for mac
 brew install caskroom/cask/brew-cask
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook
 
 #block websites
 sudo sh -c "echo '127.0.0.1 wykop.pl' >> /etc/hosts"
