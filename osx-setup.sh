@@ -4,6 +4,19 @@
 xcode-select --install
 sudo chmod -R 777 /Library/WebServer/Documents
 
+#nginx, fastcgi
+sudo nginx            # start
+sudo nginx -s stop    # stop
+sudo nginx -s reload  # restart
+ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
+ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
+brew install -v --with-fpm --with-mysql --disable-opcache php56
+~/.bash_profile
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+atom /usr/local/etc/nginx
+atom /usr/local/etc/php/5.6/
+
 #ssh timeout
 nano ~/.ssh/config
 Host *
