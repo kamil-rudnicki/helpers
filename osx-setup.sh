@@ -4,7 +4,7 @@
 xcode-select --install
 sudo chmod -R 777 /Library/WebServer/Documents
 
-#nginx, fastcgi
+#nginx, fastcgi 
 sudo nginx            # start
 sudo nginx -s stop    # stop
 sudo nginx -s reload  # restart
@@ -16,6 +16,11 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
 atom /usr/local/etc/nginx
 atom /usr/local/etc/php/5.6/
+
+#hhvm
+brew tap hhvm/hhvm
+brew install hhvm
+hhvm --mode server -vServer.Type=fastcgi -vServer.Port=9000 
 
 #ssh timeout
 nano ~/.ssh/config
