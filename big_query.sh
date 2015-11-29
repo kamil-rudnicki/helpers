@@ -8,7 +8,8 @@ where end_date >= '2015-11-01' and end_date <= '2015-11-31';"
 
 #FIX NULL VALUES
 cd /tmp/
-time sed -i -e's/,\\N,/,,/g' 2015-11.csv
+time sed -i -e's/\\\"//g' -e's/,\\N,/,,/g' 2015-11.csv
+sed '2199984q;d' 2015-11.csv 
 head -n 15 /tmp/2015-11.csv
 
 #GZIP FILES
