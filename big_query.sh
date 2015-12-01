@@ -22,4 +22,4 @@ time gzip 2014-06-02.csv
 time gsutil cp 2014-06-02.csv.gz gs://2015-11/
 
 #ON MAC LOAD DATA INTO BIG QUERY FROM GOOGLE CLOUD
-time bq load --nosync --skip_leading_rows=1 --max_bad_record=9999 timecamp2.tc_user_log gs://2015-11/2014-06-02.csv.gz user_id:INTEGER,application_id:INTEGER,end_time:TIMESTAMP,time_span:INTEGER,end_date:STRING,app_name:STRING,aditional_info:STRING,category_id:INTEGER,synch_time:TIMESTAMP,login_time:TIMESTAMP,register_time:TIMESTAMP,time_zone:INTEGER,login_count:INTEGER,plan:INTEGER,language:INTEGER,admin_userid:INTEGER,root_group_id:INTEGER
+time bq load --nosync --skip_leading_rows=1 --max_bad_record=9999 timecamp2.tc_user_log gs://2015-11/2011-01-05.csv.gz  user_id:INTEGER,application_id:INTEGER,end_time:TIMESTAMP,time_span:INTEGER,end_date:STRING,app_name:STRING,aditional_info:STRING,category_id:INTEGER,synch_time:TIMESTAMP,login_time:TIMESTAMP,register_time:TIMESTAMP,time_zone:INTEGER,login_count:INTEGER,plan:INTEGER,language:INTEGER,admin_userid:INTEGER,root_group_id:INTEGER
