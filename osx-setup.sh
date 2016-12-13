@@ -48,6 +48,7 @@ sudo sh -c "echo '127.0.0.1 www.linkedin.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 twitter.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.twitter.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.macrumors.com' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 www.dobreprogramy.pl' >> /etc/hosts"
 dscacheutil -flushcache
 
 #Git http://haacked.com/archive/2014/07/28/github-flow-aliases/
