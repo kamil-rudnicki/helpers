@@ -4,6 +4,8 @@
 xcode-select --install
 sudo chmod -R 777 /Library/WebServer/Documents
 
+#master bash https://www.blockloop.io/mastering-bash-and-terminal
+
 #nginx, fastcgi 
 sudo nginx            # start
 sudo nginx -s stop    # stop
