@@ -5,6 +5,7 @@ xcode-select --install
 sudo chmod -R 777 /Library/WebServer/Documents
 
 #master bash https://www.blockloop.io/mastering-bash-and-terminal
+# http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2 open with sublime text
 
 #nginx, fastcgi 
 sudo nginx            # start
