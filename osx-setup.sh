@@ -7,6 +7,28 @@ sudo chmod -R 777 /Library/WebServer/Documents
 #master bash https://www.blockloop.io/mastering-bash-and-terminal
 # http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2 open with sublime text
 
+#initial config
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
+defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
+defaults write -g WebKitDeveloperExtras -bool true
+defaults write com.apple.TextEdit RichText -int 0
+xcode-select --install
+xcrun simctl delete unavailable
+sudo pmset -a sms 0
+defaults write com.apple.dock no-bouncing -bool false && \
+defaults write -g AppleShowAllExtensions -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+chflags nohidden ~/Library
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+killall Dock
+
 #nginx, fastcgi 
 sudo nginx            # start
 sudo nginx -s stop    # stop
