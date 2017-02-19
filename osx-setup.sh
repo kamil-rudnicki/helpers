@@ -1,13 +1,20 @@
 #install brew
 #install node
 #install composer for php
-xcode-select --install
-sudo chmod -R 777 /Library/WebServer/Documents
 
-#master bash https://www.blockloop.io/mastering-bash-and-terminal
-# http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2 open with sublime text
+#ssh timeout keep alive
+nano ~/.ssh/config
+Host *
+  ServerAliveInterval 30
+  ServerAliveCountMax 5
+
+#links
+http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2
+https://www.blockloop.io/mastering-bash-and-terminal
 
 #initial config
+xcode-select --install
+sudo chmod -R 777 /Library/WebServer/Documents
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
 defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
@@ -28,30 +35,6 @@ defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 killall Dock
-
-#nginx, fastcgi 
-sudo nginx            # start
-sudo nginx -s stop    # stop
-sudo nginx -s reload  # restart
-ln -sfv /usr/local/opt/nginx/*.plist ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/php56/*.plist ~/Library/LaunchAgents
-brew install -v --with-fpm --with-mysql --disable-opcache php56
-~/.bash_profile
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
-atom /usr/local/etc/nginx
-atom /usr/local/etc/php/5.6/
-
-#hhvm
-brew tap hhvm/hhvm
-brew install hhvm
-hhvm --mode server -vServer.Type=fastcgi -vServer.Port=9000 
-
-#ssh timeout
-nano ~/.ssh/config
-Host *
-  ServerAliveInterval 30
-  ServerAliveCountMax 5
   
 #some apps & extansions for mac
 brew install caskroom/cask/brew-cask
