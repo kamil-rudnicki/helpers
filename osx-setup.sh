@@ -2,6 +2,9 @@
 #install node
 #install composer for php
 
+#save screenshots to Downloads, becouse it's easier to drag n' drop
+defaults write com.apple.screencapture location ~/Downloads
+
 #ssh timeout keep alive
 nano ~/.ssh/config
 Host *
