@@ -60,6 +60,16 @@ sudo sh -c "echo '127.0.0.1 twitter.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.twitter.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.macrumors.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.dobreprogramy.pl' >> /etc/hosts"
+
+sudo sh -c "echo '127.0.0.1 www.money.pl' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 www.bankier.pl' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 www.mamstartup.pl' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 mamstartup.pl' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 www.lifehacker.com' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 www.mashable.com' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 lifehacker.com' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 mashable.com' >> /etc/hosts"
+
 dscacheutil -flushcache
 
 #Git http://haacked.com/archive/2014/07/28/github-flow-aliases/
