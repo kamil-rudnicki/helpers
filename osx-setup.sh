@@ -1,15 +1,16 @@
 #install brew
 #install node
-#install composer for php
 
 #save screenshots to Downloads, becouse it's easier to drag n' drop
 defaults write com.apple.screencapture location ~/Downloads
 
 #ssh timeout keep alive
+mkdir ~/.ssh
 nano ~/.ssh/config
 Host *
   ServerAliveInterval 30
   ServerAliveCountMax 5
+  UseKeychain yes
 
 #links
 http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2
@@ -30,7 +31,7 @@ xcrun simctl delete unavailable
 sudo pmset -a sms 0
 defaults write com.apple.dock no-bouncing -bool false && \
 defaults write -g AppleShowAllExtensions -bool true
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 chflags nohidden ~/Library
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true && \
 defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -71,20 +72,3 @@ sudo sh -c "echo '127.0.0.1 www.youtube.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.spidersweb.pl' >> /etc/hosts"
 
 dscacheutil -flushcache
-
-#Git http://haacked.com/archive/2014/07/28/github-flow-aliases/
-nano ~/.gitconfig 
-[alias]
-    co = checkout
-    ec = config --global -e
-    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    cob = checkout -b
-    cm = !git add -A && git commit -m
-    pall = "!func(){ git add . && git commit -aqm $1 && git pull -q --no-progress && git push -q; }; func"
-    save = !git add -A && git commit -m 'SAVEPOINT'
-    wip = !git add -u && git commit -m "WIP" 
-    undo = reset HEAD~1 --mixed
-    amend = commit -a --amend
-    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
-    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
-    bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
