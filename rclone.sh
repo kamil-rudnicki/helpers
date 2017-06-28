@@ -1,5 +1,6 @@
 #download rclone
 sudo mv rclone /usr/local/bin/
+rclone config #configure rclone and connect to api's
 nano /Users/kamil/.config/rclone/rclone.conf 
 rclone lsd S3:kamils-backups/
 rclone --transfers=32 --checkers=16 --no-traverse --drive-chunk-size=16384k --drive-upload-cutoff=16384k --stats=50s copy GD-PRIVATE: S3:kamils-backups/rclone-gd-private
