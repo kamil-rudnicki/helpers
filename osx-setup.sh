@@ -70,5 +70,6 @@ sudo sh -c "echo '127.0.0.1 lifehacker.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 mashable.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.youtube.com' >> /etc/hosts"
 sudo sh -c "echo '127.0.0.1 www.spidersweb.pl' >> /etc/hosts"
+sudo sh -c "echo '127.0.0.1 www.netflix.com' >> /etc/hosts"
 
 dscacheutil -flushcache
