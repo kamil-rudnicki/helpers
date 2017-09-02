@@ -1,2 +1,2 @@
 env EDITOR=nano crontab -e
-57 8,9,10,11,12,13,14,15,16 * * * osascript -e 'display notification "Stand up and move a little for one minute." with title "Time to stand!"'; osascript -e 'say "Kamil, time to stand up"';
+57 8,9,10,11,12,13,14,15,16 * * 1,2,3,4,5 osascript -e 'display notification "Stand up and move a little for one minute." with title "Time to stand!"'; osascript -e 'say "Time to stand up"';
