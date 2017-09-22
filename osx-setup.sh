@@ -1,5 +1,6 @@
 #install brew
 #install node
+# !!! check for new emails every hour
 
 #save screenshots to Downloads, becouse it's easier to drag n' drop
 defaults write com.apple.screencapture location ~/Downloads
