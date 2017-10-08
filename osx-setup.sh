@@ -13,6 +13,8 @@ Host *
   ServerAliveCountMax 5
   UseKeychain yes
 
+https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
+
 #links
 http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2
 https://www.blockloop.io/mastering-bash-and-terminal
