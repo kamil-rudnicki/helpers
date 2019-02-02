@@ -17,6 +17,7 @@ https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh
 
 #links
 http://charles.lescampeurs.org/2012/06/18/right-click-open-with-sublime-text-2
+https://michaelkummer.com/technology/create-dropbox-link-file-finder-using-automator/
 https://www.blockloop.io/mastering-bash-and-terminal
 
 #initial config
