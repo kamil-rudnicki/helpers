@@ -4,6 +4,7 @@
 
 #zsh
 https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/
+https://github.com/psprint/zsh-navigation-tools
 
 #save screenshots to Downloads, becouse it's easier to drag n' drop
 defaults write com.apple.screencapture location ~/Downloads
