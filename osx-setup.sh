@@ -2,6 +2,9 @@
 #install node
 # !!! check for new emails every hour
 
+#zsh
+https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/
+
 #save screenshots to Downloads, becouse it's easier to drag n' drop
 defaults write com.apple.screencapture location ~/Downloads
 
